@@ -18,8 +18,49 @@
 /* #define HOME_N RCTL_T(KC_N) */
 #define HOME_E RSFT_T(KC_E)
 /* #define HOME_I LALT_T(KC_I) */
-#define HOME_M RGUI_T(KC_M)
+#define HOME_M LGUI_T(KC_M)
 
+/* #define A_D SEND_STRING(SS_TAP(X_RGUI)"a\"") */
+/* #define A_D SEND_STRING("avoien") */
+
+#define M_COMPOSE X_RGUI
+#define COMPOSE KC_RGUI
+
+enum custom_keycodes {
+    A_D = SAFE_RANGE,
+    O_D,
+    U_D,
+    ESZ,
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+    case A_D:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(M_COMPOSE)"a\"");
+            /* SEND_STRING("QMK is the best thing ever!"); */
+        } else {
+            // when keycode QMKBEST is released
+        }
+        break;
+    case O_D:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(M_COMPOSE)"o\"");
+        }
+        break;
+    case U_D:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(M_COMPOSE)"u\"");
+        }
+        break;
+    case ESZ:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(M_COMPOSE)"ss");
+        }
+        break;
+    }
+    return true;
+};
 enum unicode_names {
     A_DIAE_CAP,
     A_DIAE,
@@ -72,21 +113,21 @@ KC_MAIL,                 KC_F1,                    KC_F2,           KC_F3,      
 KC_EQL,                  KC_1,                     KC_2,            KC_3,             KC_4,                  KC_5,
 KC_TAB,                  KC_Q,                     KC_W,            KC_F,             KC_P,                  KC_B,
 KC_DEL,                  KC_A,                     KC_R,            HOME_S,           KC_T,                  HOME_G,
-MO(UMLAUTS),             KC_Z,                     KC_X,            KC_C,             KC_D,                  KC_V,
+OSL(UMLAUTS),            KC_Z,                     KC_X,            KC_C,             KC_D,                  KC_V,
 KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT,
 OSL(SYM_RIGHT),          KC_MS_BTN3,
 LSFT(KC_INSERT),
 LCTL_T(KC_BSPC),         LALT_T(KC_ESC),           KC_F21,
 
-KC_F9,                   KC_F10,                   KC_F11,          KC_F12,           KC_AUDIO_MUTE,         KC_AUDIO_VOL_DOWN,         KC_AUDIO_VOL_UP,         RESET,         RESET,
+KC_F9,                   KC_F10,                   KC_F11,          KC_F12,           KC_AUDIO_MUTE,         KC_AUDIO_VOL_DOWN,         KC_AUDIO_VOL_UP,         COMPOSE,       RESET,
 KC_6,                    KC_7,                     KC_8,            KC_9,             KC_0,                  KC_MINUS,
 KC_J,                    KC_L,                     KC_U,            KC_Y,             KC_SEMICOLON,          KC_BACKSLASH,
 HOME_M,                  KC_N,                     HOME_E,          KC_I,             KC_O,                  KC_QUOTE,
-KC_K,                    KC_H,                     KC_COMMA,        KC_DOT,           KC_SLASH,              MO(UMLAUTS),
+KC_K,                    KC_H,                     KC_COMMA,        KC_DOT,           KC_SLASH,              OSL(UMLAUTS),
 KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT,
-KC_F22,                  OSL(SYM_LEFT),
+KC_CAPS_LOCK,            OSL(SYM_LEFT),
 KC_F23,
-KC_NO,                 LALT_T(KC_ENTER),         LCTL_T(KC_SPC)
+COMPOSE,                 LALT_T(KC_ENTER),         LCTL_T(KC_SPC)
 
     ),
 
@@ -145,7 +186,7 @@ ________,         ________,         ________
 ________,         ________,         ________,         ________,         ________,         ________,         ________,         ________,         ________,
 ________,         ________,         ________,         ________,         ________,         ________,
 ________,         ________,         ________,         ________,         ________,         ________,
-________,         XP(A_DIAE,A_DIAE_CAP),  ________,         X(SHARP_S),         ________,         ________,
+________,         A_D,              ________,         ESZ,              ________,         ________,
 ________,         ________,         ________,         ________,         ________,         ________,
 ________,         ________,         ________,         ________,
 ________,         ________,
@@ -154,8 +195,8 @@ ________,         ________,         ________,
 
 ________,         ________,         ________,         ________,         ________,         ________,         ________,         ________,         ________,
 ________,         ________,         ________,         ________,         ________,         ________,
-________,         ________,         XP(U_DIAE,U_DIAE_CAP),         ________,         ________,         ________,
-________,         ________,         ________,         ________,         XP(O_DIAE,O_DIAE_CAP),         ________,
+________,         ________,         U_D,              ________,         ________,         ________,
+________,         ________,         ________,         ________,         O_D,              ________,
 ________,         ________,         ________,         ________,         ________,         ________,
 ________,         ________,         ________,         ________,
 ________,         ________,
