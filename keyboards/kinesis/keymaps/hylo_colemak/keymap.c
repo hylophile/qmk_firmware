@@ -31,6 +31,9 @@ enum custom_keycodes {
     O_D,
     U_D,
     ESZ,
+    CTRLCC,
+    CTRLCK,
+    CTRLCQUOTE,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -56,6 +59,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ESZ:
         if (record->event.pressed) {
             SEND_STRING(SS_TAP(M_COMPOSE)"ss");
+        }
+    case CTRLCC:
+        if (record->event.pressed) {
+            SEND_STRING(SS_LCTL("cc"));
+        }
+        break;
+    case CTRLCK:
+        if (record->event.pressed) {
+            SEND_STRING(SS_LCTL("ck"));
+        }
+        break;
+    case CTRLCQUOTE:
+        if (record->event.pressed) {
+            SEND_STRING(SS_LCTL("c"));
+            SEND_STRING("'");
         }
         break;
     }
@@ -187,7 +205,7 @@ ________,         ________,         ________,         ________,         ________
 ________,         ________,         ________,         ________,         ________,         ________,
 ________,         ________,         ________,         ________,         ________,         ________,
 ________,         A_D,              ________,         ESZ,              ________,         ________,
-________,         ________,         ________,         ________,         ________,         ________,
+________,         ________,         ________,         CTRLCC,           CTRLCK,           CTRLCQUOTE,
 ________,         ________,         ________,         ________,
 ________,         ________,
 ________,
