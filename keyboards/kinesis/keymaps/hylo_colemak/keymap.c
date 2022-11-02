@@ -132,7 +132,8 @@ KC_EQL,                  KC_1,                     KC_2,            KC_3,       
 KC_TAB,                  KC_Q,                     KC_W,            KC_F,             KC_P,                  KC_B,
 KC_DEL,                  KC_A,                     KC_R,            HOME_S,           KC_T,                  HOME_G,
 OSL(UMLAUTS),            KC_Z,                     KC_X,            KC_C,             KC_D,                  KC_V,
-KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT,
+/* KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT, */
+________,                ________,                 ________,        ________,
 OSL(SYM_RIGHT),          KC_MS_BTN3,
 LSFT(KC_INSERT),
 /* LCTL_T(KC_BSPC),         LALT_T(KC_ESC),           KC_F21, */
