@@ -132,8 +132,7 @@ KC_EQL,                  KC_1,                     KC_2,            KC_3,       
 KC_TAB,                  KC_Q,                     KC_W,            KC_F,             KC_P,                  KC_B,
 KC_DEL,                  KC_A,                     HOME_R,          HOME_S,           HOME_T,                  HOME_G,
 OSL(UMLAUTS),            KC_Z,                     KC_X,            KC_C,             KC_D,                  KC_V,
-/* KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT, */
-________,                ________,                 ________,        ________,
+KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT,
 OSL(SYM_RIGHT),          KC_MS_BTN3,
 LSFT(KC_INSERT),
 /* LCTL_T(KC_BSPC),         LALT_T(KC_ESC),           KC_F21, */
@@ -144,7 +143,8 @@ KC_6,                    KC_7,                     KC_8,            KC_9,       
 KC_J,                    KC_L,                     KC_U,            KC_Y,             KC_SEMICOLON,          KC_BACKSLASH,
 HOME_M,                  HOME_N,                   HOME_E,          HOME_I,           KC_O,                  KC_QUOTE,
 KC_K,                    KC_H,                     KC_COMMA,        KC_DOT,           KC_SLASH,              OSL(UMLAUTS),
-KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT,
+/* KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT, */
+________,                ________,                 ________,        ________,
 KC_CAPS_LOCK,            OSL(SYM_LEFT),
 KC_F23,
 /* COMPOSE,                 LALT_T(KC_ENTER),         LCTL_T(KC_SPC) */
