@@ -247,3 +247,7 @@ ________,         ________,         ________
 
     )
 };
+
+// Local Variables:
+// eval: (apheleia-mode -1)
+// End:
