@@ -9,16 +9,16 @@
 #define ________ KC_TRANSPARENT
 
 // Left-hand home row mods
-#define HOME_G LGUI_T(KC_G)
-/* #define HOME_R LALT_T(KC_R) */
+#define HOME_R LALT_T(KC_R)
 #define HOME_S LSFT_T(KC_S)
-/* #define HOME_T LCTL_T(KC_T) */
+#define HOME_T LCTL_T(KC_T)
+#define HOME_G LGUI_T(KC_G)
 
 // Right-hand home row mods
-/* #define HOME_N RCTL_T(KC_N) */
-#define HOME_E RSFT_T(KC_E)
-/* #define HOME_I LALT_T(KC_I) */
 #define HOME_M LGUI_T(KC_M)
+#define HOME_N RCTL_T(KC_N)
+#define HOME_E RSFT_T(KC_E)
+#define HOME_I LALT_T(KC_I)
 
 /* #define A_D SEND_STRING(SS_TAP(X_RGUI)"a\"") */
 /* #define A_D SEND_STRING("avoien") */
@@ -135,7 +135,8 @@ OSL(UMLAUTS),            KC_Z,                     KC_X,            KC_C,       
 KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT,
 OSL(SYM_RIGHT),          KC_MS_BTN3,
 LSFT(KC_INSERT),
-LCTL_T(KC_BSPC),         LALT_T(KC_ESC),           KC_F21,
+/* LCTL_T(KC_BSPC),         LALT_T(KC_ESC),           KC_F21, */
+KC_BSPC,                 KC_ESC,                   KC_F21,
 
 KC_F9,                   KC_F10,                   KC_F11,          KC_F12,           KC_AUDIO_MUTE,         KC_AUDIO_VOL_DOWN,         KC_AUDIO_VOL_UP,         COMPOSE,       RESET,
 KC_6,                    KC_7,                     KC_8,            KC_9,             KC_0,                  KC_MINUS,
@@ -145,7 +146,8 @@ KC_K,                    KC_H,                     KC_COMMA,        KC_DOT,     
 KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT,
 KC_CAPS_LOCK,            OSL(SYM_LEFT),
 KC_F23,
-COMPOSE,                 LALT_T(KC_ENTER),         LCTL_T(KC_SPC)
+/* COMPOSE,                 LALT_T(KC_ENTER),         LCTL_T(KC_SPC) */
+COMPOSE,                 KC_ENTER,                 KC_SPC
 
     ),
 
