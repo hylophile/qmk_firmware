@@ -144,7 +144,8 @@ KC_J,                    KC_L,                     KC_U,            KC_Y,       
 HOME_M,                  HOME_N,                   HOME_E,          HOME_I,           KC_O,                  KC_QUOTE,
 KC_K,                    KC_H,                     KC_COMMA,        KC_DOT,           KC_SLASH,              OSL(UMLAUTS),
 /* KC_LEFT,                 KC_DOWN,                  KC_UP,           KC_RIGHT, */
-________,                ________,                 ________,        ________,
+KC_HOME,                 KC_PGDN,                  KC_PGUP,         KC_END,
+/* ________,                ________,                 ________,        ________, */
 KC_CAPS_LOCK,            OSL(SYM_LEFT),
 KC_F23,
 /* COMPOSE,                 LALT_T(KC_ENTER),         LCTL_T(KC_SPC) */
