@@ -2,7 +2,6 @@
 
 // place overrides here
 
-
 // Configure the global tapping term (default: 200ms)
 #define TAPPING_TERM 200
 
@@ -15,4 +14,6 @@
 #define PERMISSIVE_HOLD
 
 /* #define HOLD_ON_OTHER_KEY_PRESS */
-#define UNICODE_SELECTED_MODES UC_LNX
+/* #define UNICODE_SELECTED_MODES UC_LNX */
+
+#define LAYER_STATE_32BIT

@@ -141,7 +141,7 @@ LSFT(KC_INSERT),
 /* LCTL_T(KC_BSPC),         LALT_T(KC_ESC),           KC_F21, */
 LT(SYM_RIGHT,KC_BSPC),                 KC_ESC,                   LGUI(KC_LEFT),
 
-KC_F9,                   KC_F10,                   KC_F11,          KC_F12,           KC_AUDIO_MUTE,         KC_AUDIO_VOL_DOWN,         KC_AUDIO_VOL_UP,         COMPOSE,       RESET,
+KC_F9,                   KC_F10,                   KC_F11,          KC_F12,           KC_AUDIO_MUTE,         KC_AUDIO_VOL_DOWN,         KC_AUDIO_VOL_UP,         COMPOSE,       QK_BOOT,
 KC_6,                    KC_7,                     KC_8,            KC_9,             KC_0,                  KC_MINUS,
 KC_J,                    KC_L,                     KC_U,            KC_Y,             KC_SEMICOLON,          KC_BACKSLASH,
 HOME_M,                  HOME_N,                   HOME_E,          HOME_I,           KC_O,                  KC_QUOTE,
